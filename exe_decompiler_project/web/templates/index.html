@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Malware Dashboard</title>
+</head>
+<body>
+    <h1>Upload EXE for Analysis</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h2>Prediction: {{ result.prediction }}</h2>
+        <h3>Report:</h3>
+        <pre>{{ result.report }}</pre>
+        <h3>Features:</h3>
+        <pre>{{ result.features }}</pre>
+    {% endif %}
+</body>
+</html>
