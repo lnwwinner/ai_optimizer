@@ -1,0 +1,6 @@
+flask
+pefile
+scikit-learn
+joblib
+xgboost
+requests
